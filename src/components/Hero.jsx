@@ -4,6 +4,7 @@ function Hero({ scrollToProperties }) {
   const background = {
     backgroundImage: `url(${Background})`,
     backgroundSize: "cover",
+    backgroundPosition: "center",
   };
   return (
     <>
@@ -17,10 +18,7 @@ function Hero({ scrollToProperties }) {
         <p className="text-sm text-center py-4 uppercase font-light tracking-[0.5em] drop-shadow-md">
           revolutionizing real estate
         </p>
-        <button
-          onClick={scrollToProperties}
-          className="w-48 py-3 my-1 rounded-md shadow-md font-medium bg-white/40 uppercase hover:bg-white/60 hover:shadow-lg focus:bg-white/60 focus:shadow-lg active:scale-95 active:shadow-sm duration-300"
-        >
+        <button onClick={scrollToProperties} className="glass-button">
           discover
         </button>
       </div>

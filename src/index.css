@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer components {
-  .custom-container {
-    @apply container flex flex-col justify-center items-center px-4 py-4;
+  .glass-button {
+    @apply w-48 py-3 my-1 rounded-md shadow-md font-medium bg-white/20 uppercase hover:bg-white/40 hover:shadow-lg focus:bg-white/40 focus:shadow-lg active:scale-95 active:shadow-sm duration-300;
   }
 }
