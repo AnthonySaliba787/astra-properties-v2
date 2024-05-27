@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import Properties from "./components/Properties";
 import AboutModal from "./components/AboutModal";
 import ContactModal from "./components/ContactModal";
+import { motion } from "framer-motion";
 
 function App() {
   const heroRef = useRef(null);
@@ -25,12 +26,16 @@ function App() {
 
   return (
     <>
-      {aboutModal ? (
-        <AboutModal activateAboutModal={activateAboutModal} />
-      ) : null}
-      {contactModal ? (
-        <ContactModal activateContactModal={activateContactModal} />
-      ) : null}
+      <AboutModal
+        key="modal"
+        activateAboutModal={activateAboutModal}
+        aboutModal={aboutModal}
+      />
+      <ContactModal
+        key="modal2"
+        activateContactModal={activateContactModal}
+        contactModal={contactModal}
+      />
       <div className="min-h-screen mx-auto flex flex-col justify-center items-center">
         <Hero
           scrollToProperties={scrollToProperties}
