@@ -1,4 +1,5 @@
 import Background from "../assets/herobg.webp";
+import Navbar from "./Navbar";
 
 function Hero({ scrollToProperties }) {
   const background = {
@@ -12,14 +13,15 @@ function Hero({ scrollToProperties }) {
         style={background}
         className="w-full min-h-screen flex flex-col justify-center items-center px-4 py-4 text-neutral-100"
       >
+        <Navbar />
         <h1 className="text-4xl md:text-5xl font-medium text-center drop-shadow-md">
-          Astra Properties
+          Reach the sky with us
         </h1>
         <p className="text-sm text-center py-4 uppercase font-light tracking-[0.5em] drop-shadow-md">
           revolutionizing real estate
         </p>
         <button onClick={scrollToProperties} className="glass-button">
-          discover
+          explore
         </button>
       </div>
     </>
