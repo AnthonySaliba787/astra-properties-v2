@@ -1,7 +1,11 @@
 import Background from "../assets/herobg.webp";
 import Navbar from "./Navbar";
 
-function Hero({ scrollToProperties }) {
+function Hero({
+  scrollToProperties,
+  activateAboutModal,
+  activateContactModal,
+}) {
   const background = {
     backgroundImage: `url(${Background})`,
     backgroundSize: "cover",
@@ -13,7 +17,10 @@ function Hero({ scrollToProperties }) {
         style={background}
         className="w-full min-h-screen flex flex-col justify-center items-center px-4 py-4 text-neutral-100"
       >
-        <Navbar />
+        <Navbar
+          activateAboutModal={activateAboutModal}
+          activateContactModal={activateContactModal}
+        />
         <h1 className="text-4xl md:text-5xl font-medium text-center drop-shadow-md">
           Reach the sky with us
         </h1>
